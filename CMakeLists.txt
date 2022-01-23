@@ -24,7 +24,9 @@ CPMAddPackage(gh:iboB/itlib@1.4.5)
 # Demos
 macro(add_demo name)
     add_executable(${name} ${name}.cpp)
+    target_link_libraries(${name} itlib)
 endmacro()
 
 add_demo(00-copy-over-move)
+add_demo(01-capture-non-copy)
 
