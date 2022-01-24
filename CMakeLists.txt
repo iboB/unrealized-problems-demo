@@ -28,5 +28,6 @@ macro(add_demo name)
 endmacro()
 
 add_demo(00-copy-over-move)
-add_demo(01-capture-non-copy)
+add_demo(01-func-move-noexcept-false)
+add_demo(02-capture-non-copy)
 
