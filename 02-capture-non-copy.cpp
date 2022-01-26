@@ -2,8 +2,6 @@
 #include <memory>
 #include <functional>
 
-#include <itlib/ufunction.hpp>
-
 int main()
 {
     auto sptr = std::make_unique<std::string>("foo");
@@ -12,7 +10,7 @@ int main()
         std::cout << *p;
     };
 
-    itlib::ufunction<void()> f = std::move(lambda);
+    //std::function<void()> f = std::move(lambda);
 
     return 0;
 }

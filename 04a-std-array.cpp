@@ -1,10 +1,15 @@
-#pragma once
+#include "push_front.hpp"
 #include <string>
 #include <iostream>
+#include <array>
 
 class person
 {
 public:
+    person()
+        : m_name("<nobody>")
+    {}
+
     explicit person(std::string name)
         : m_name(std::move(name))
     {}
@@ -43,3 +48,12 @@ public:
 private:
     std::string m_name;
 };
+
+int main()
+{
+    std::array<person, 5> ar;
+    ar[0] = person("alice");
+    ar[1] = person("bob");
+    auto ar2 = ar;
+    return 0;
+}
